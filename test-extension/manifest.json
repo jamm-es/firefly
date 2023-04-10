@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "lavalab testing extension",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "js": ["scripts/inject.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["scripts/bundle.js"],
+    "matches": ["<all_urls>"]
+  }]
+}

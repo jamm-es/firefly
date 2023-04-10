@@ -1,8 +1,10 @@
 {
   "name": "lavalab",
+  "main": "widget.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@supabase/supabase-js": "^2.15.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,16 +12,24 @@
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
+    "create-react-app": "^5.0.1",
+    "dom-to-image-more": "^3.1.1",
+    "html2canvas": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "safe-json-stringify": "^1.2.0",
+    "styled-components": "^5.3.9",
     "typescript": "^4.9.5",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "npm run build:react && npm run build:bundles",
+    "build:react": "react-app-rewired build",
+    "build:bundles": "cp build/static/js/bundle.js test-extension/scripts/bundle.js && cp build/static/js/bundle.js bundle.js",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +49,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/dom-to-image": "^2.6.4",
+    "@types/json-stringify-safe": "^5.0.0",
+    "@types/safe-json-stringify": "^1.1.2",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.1",
+    "customize-cra-5": "^5.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "react-app-rewired": "^2.2.1",
+    "rewire": "^6.0.0"
   }
 }

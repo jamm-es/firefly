@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/lavalab.iml" filepath="$PROJECT_DIR$/.idea/lavalab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/firefly.iml" filepath="$PROJECT_DIR$/.idea/firefly.iml" />
     </modules>
   </component>
 </project>
