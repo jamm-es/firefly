@@ -39,16 +39,16 @@
     <h1>Title!!!!!!</h1>
     <script>
       setTimeout(() => {
-        const x = new XMLHttpRequest();
-        x.open('GET', 'https://httpstat.us/200');
-        // x.open('GET', 'https://fdaskljfkladjfklasdjkfljdaklfjdklsjfkldjaslkfjsad.com');
-        x.setRequestHeader('x-alpha', 'beta');
-        x.setRequestHeader('x-theta', 'omega');
-        // x.addEventListener('loadend', function(e) {
-        //   console.log(e);
-        //   console.log(this);
-        // })
-        x.send();
+        fetch('https://httpstat.us/200');
+        fetch('https://httpstat.us/200', {
+          method: 'POST',
+          headers: {
+            alpha: 'beta'
+          },
+          body: 'AHHHHHHHHHHHHHHHHHHHHHH'
+        });
+        fetch('https://google.com:81');
+        fetch('https://httpstat.us/500');
       }, 2000)
     </script>
   </body>
